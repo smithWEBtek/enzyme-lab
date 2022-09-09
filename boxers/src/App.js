@@ -1,14 +1,17 @@
-import logo from './logo.svg';
+import React, { useState } from 'react'
 import './App.css';
 
 function App() {
+  const [callCount, setCallCount] = useState(0)
+
+  const handleClick = () => {
+    console.log('button clicked')
+    setCallCount(callCount + 1)
+  }
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -17,6 +20,7 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={handleClick} >calls: {callCount}</button>
       </header>
     </div>
   );
