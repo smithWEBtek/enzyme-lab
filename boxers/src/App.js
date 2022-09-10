@@ -21,6 +21,16 @@ function App() {
           Learn React
         </a>
         <button onClick={handleClick} >calls: {callCount}</button>
+        <label htmlFor="boxer-select">Choose a boxer:</label>
+
+        <select name="boxers" id="boxer-select">
+          <option value="">--Please choose an option--</option>
+          <option value="tyson">Mike Tyson</option>
+          <option value="lewis">Lennox Lewis</option>
+          <option value="frasier">Joe Frasier</option>
+          <option value="ali">Muhammed Ali</option>
+        </select>
+
       </header>
     </div>
   );
